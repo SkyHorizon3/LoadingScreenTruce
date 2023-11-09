@@ -10,7 +10,7 @@ namespace LoadingScreenTruce
 			if (ui && (ui->IsMenuOpen(RE::LoadingMenu::MENU_NAME) || ui->IsMenuOpen(RE::FaderMenu::MENU_NAME))) {
 				return true;
 			}
-		} 
+		}
 
 		return result;
 	}
