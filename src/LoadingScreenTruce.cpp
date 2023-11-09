@@ -1,6 +1,5 @@
 ﻿#include "../include/LoadingScreenTruce.h"
 #include "../include/Hooks.h"
-#include "../include/Globals.h"
 
 // Setup logger for plugin
 void Main::SetupLog()
