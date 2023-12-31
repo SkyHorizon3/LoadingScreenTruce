@@ -3,7 +3,10 @@
   "name": "loadingscreentruce",
   "version-string": "0.0.1",
   "dependencies": [
-    "commonlibsse-ng",
-    "simpleini"
+    "fmt",
+    "spdlog",
+    "directxtk",
+    "catch2",
+    "rapidcsv"
   ]
 }

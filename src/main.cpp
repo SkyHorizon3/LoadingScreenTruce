@@ -1,8 +1,9 @@
-﻿#include "../include/LoadingScreenTruce.h"
-#include "../include/Hooks.h"
+﻿#include "../include/Hooks.h"
+
+std::shared_ptr<spdlog::logger> g_Logger;
 
 // Setup logger for plugin
-void Main::SetupLog()
+void SetupLog()
 {
 	auto logsFolder = SKSE::log::log_directory();
 	if (!logsFolder)
@@ -36,21 +37,14 @@ void MessageListener(SKSE::MessagingInterface::Message* message)
 	}
 }
 
-void Main::Setup()
+SKSEPluginLoad(const SKSE::LoadInterface* skse)
 {
+	SKSE::Init(skse);
 	SetupLog();
 
 	SKSE::GetMessagingInterface()->RegisterListener(MessageListener);
 
 	g_Logger->info("{} v{} loaded", Plugin::NAME, Plugin::VERSION);
-
-}
-
-SKSEPluginLoad(const SKSE::LoadInterface* skse)
-{
-	SKSE::Init(skse);
-	Main plugin;
-	plugin.Setup();
 
 	return true;
 }

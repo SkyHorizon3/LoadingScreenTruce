@@ -3,14 +3,6 @@
 #include "RE/Skyrim.h"
 #include "SKSE/SKSE.h"
 
-#include <unordered_set>
-#include <chrono>
-#include <memory>
-#include <Windows.h>
-#include <filesystem>
-#include <string>
-
-
 using namespace std::literals;
 
 #if _DEBUG

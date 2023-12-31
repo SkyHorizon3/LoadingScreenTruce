@@ -9,6 +9,9 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
 include(SKSEPlugin)
 
+# Hide useless warnings...
+add_definitions(-D_SILENCE_STDEXT_ARR_ITERS_DEPRECATION_WARNING)
+
 # Configure MSVC-specific settings for C++23
 if(MSVC_VERSION GREATER_EQUAL 1936 AND MSVC_IDE) # 17.6+
     file(CONFIGURE OUTPUT "${CMAKE_BINARY_DIR}/Directory.Build.props" CONTENT [==[
