@@ -1,12 +1,13 @@
 {
-  "$schema": "https://raw.githubusercontent.com/microsoft/vcpkg-tool/main/docs/vcpkg.schema.json",
   "name": "loadingscreentruce",
-  "version-string": "0.0.1",
+  "version-semver": "0.0.1",
+  "description": "",
+  "license": "MIT",
   "dependencies": [
-    "fmt",
     "spdlog",
     "directxtk",
     "catch2",
     "rapidcsv"
-  ]
+  ],
+  "builtin-baseline": "7eb700c9688daed6d8bdcdc571ebe3eedea6a774"
 }
